@@ -2,16 +2,17 @@
 
 
 const mongoose=require("mongoose");
-require("dotenv").config();
 
 // define the mongoDB connection URL
-
+require("dotenv").config();
 
 //Local connection
-//const mongoURL="mongodb://localhost:27017/hotels" // replace hotels as your name of database
+const local_db_url=process.env.LOCAL_DB_URL;
+const mongoURL=local_db_url // replace hotels as your name of database
 
 //Remote connection
-const mongoURL="mongodb+srv://Bucket_of_code:mohammad_s_d_khan7@cluster0.pamrc.mongodb.net/"
+const remote_db_url=process.env.REMOTE_DB_URL;
+//const mongoURL=remote_db_url
 
 // set up mongoDB connection 
 

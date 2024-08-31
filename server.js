@@ -8,7 +8,14 @@ const Person = require('./models/person');
 const MenuItems = require('./models/menu');
 app.use(bodyParser.json());// and data will saved in the req.body
 
-app.listen(3000,()=>{console.log("server is listining on port 3000")});
+//WE ARE REQUIRING THE .ENV FILE
+require("dotenv").config();
+
+const port=process.env.PORT;
+
+
+
+app.listen(port,()=>{console.log("server is listining on port "+port)});
 
 app.get('/', function (req, res) {
     res.send('Welcom to our Hotel');
