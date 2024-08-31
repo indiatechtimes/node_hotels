@@ -41,6 +41,6 @@ db.on("disconnected",()=>{
     console.log("disconnected to mongoDB server");
 });
 
-// now export the database connection
+// now export the database connection 
 module.exports=db;
 
