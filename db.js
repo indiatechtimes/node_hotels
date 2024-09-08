@@ -11,7 +11,7 @@ const local_db_url=process.env.LOCAL_DB_URL;
 const mongoURL=local_db_url // replace hotels as your name of database
 
 //Remote connection
-const remote_db_url=process.env.REMOTE_DB_URL;
+//const remote_db_url=process.env.REMOTE_DB_URL;
 //const mongoURL=remote_db_url
 
 // set up mongoDB connection 
