@@ -12,7 +12,7 @@ const app = express();
 passport.use(new LocalStrategy(async(USERNAME,PASSWORD,done)=>{
     // authentication logic
   
-    try {
+    try {    
       console.log("Recevied credentials:",USERNAME,PASSWORD);
       const user=await Person.findOne({username:USERNAME});
       if(!user){
