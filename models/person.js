@@ -1,4 +1,5 @@
 const mongoose=require("mongoose");
+const bcrypt=require("bcrypt");
 
 // define the person schema
 const personSchema=new mongoose.Schema({
@@ -53,3 +54,13 @@ const personSchema=new mongoose.Schema({
 
 const Person=mongoose.model("Person",personSchema);
 module.exports=Person;
+
+personSchema.pre("save",async function(next) {
+    try {
+
+        
+        next();
+    } catch (error) {
+        
+    }
+})
