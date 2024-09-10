@@ -80,6 +80,16 @@ personSchema.pre("save",async function(next) {
     }
 })
 
+personSchema.methods.comparePassword=async function(candidatePassword) {
+    try {
+        // use bcrypt to compare the provided password with the hashed password
+        const isMatch=await bcrypt.compare(candidatePassword,this.password);
+        return isMatch'
+    } catch (error) {
+        throw error;
+    }
+}
+
 //now 
 const Person=mongoose.model("Person",personSchema);
 module.exports=Person;
